@@ -12,5 +12,6 @@ namespace PCBack.Infrastructure.Persistance
         }
 
         public DbSet<TaskEntity> Tasks { get; set; }
+        public DbSet<SubmissionEntity> Submissions { get; set; }
     }
 }
