@@ -10,6 +10,7 @@ namespace PCBack.Api.Controllers
     public class TasksController : ControllerBase
     {
         private readonly ISender mediator;
+
         public TasksController(ISender mediator) => this.mediator = mediator;
 
         [HttpGet("[controller]")]
