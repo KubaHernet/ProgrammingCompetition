@@ -11,7 +11,8 @@ namespace PCBack.Infrastructure.Persistance.Confuguration
             builder.Property(x => x.UserName)
                 .IsRequired();
 
-            builder.Property(x => x.Task)
+            builder.HasOne(x => x.Task)
+                .WithMany(y => y.Submissions)
                 .IsRequired();
 
             builder.HasIndex(x => x.UserName);

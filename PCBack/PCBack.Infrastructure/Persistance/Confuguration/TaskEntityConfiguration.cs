@@ -9,7 +9,8 @@ namespace PCBack.Infrastructure.Persistance.Confuguration
         public void Configure(EntityTypeBuilder<TaskEntity> builder)
         {
             builder.Property(x => x.Name)
-                .IsRequired();
+                .IsRequired()
+                .HasMaxLength(50);
 
             builder.Property(x => x.Description)
                 .IsRequired();
