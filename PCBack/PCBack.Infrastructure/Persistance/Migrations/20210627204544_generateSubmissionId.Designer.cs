@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PCBack.Infrastructure.Persistance;
 
 namespace PCBack.Infrastructure.Persistance.Migrations
 {
     [DbContext(typeof(PcDbContext))]
-    partial class PcDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210627204544_generateSubmissionId")]
+    partial class generateSubmissionId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,15 +22,24 @@ namespace PCBack.Infrastructure.Persistance.Migrations
 
             modelBuilder.Entity("PCBack.Domain.Entities.SubmissionEntity", b =>
                 {
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(450)")
+                        .HasDefaultValueSql("NEWID()");
 
                     b.Property<string>("TaskId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("UserName", "TaskId");
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("TaskId");
+
+                    b.HasIndex("UserName");
 
                     b.ToTable("Submissions");
                 });

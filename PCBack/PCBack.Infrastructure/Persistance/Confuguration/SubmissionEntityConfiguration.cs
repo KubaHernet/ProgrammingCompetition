@@ -8,14 +8,15 @@ namespace PCBack.Infrastructure.Persistance.Confuguration
     {
         public void Configure(EntityTypeBuilder<SubmissionEntity> builder)
         {
+            builder.HasKey(x => new { x.UserName, x.TaskId });
+
             builder.Property(x => x.UserName)
                 .IsRequired();
 
             builder.HasOne(x => x.Task)
                 .WithMany(y => y.Submissions)
+                .HasForeignKey(x => x.TaskId)
                 .IsRequired();
-
-            builder.HasIndex(x => x.UserName);
         }
     }
 }

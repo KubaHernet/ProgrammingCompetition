@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PCBack.Infrastructure.Persistance;
 
 namespace PCBack.Infrastructure.Persistance.Migrations
 {
     [DbContext(typeof(PcDbContext))]
-    partial class PcDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210627205449_addSubmissionCompositeKey")]
+    partial class addSubmissionCompositeKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
