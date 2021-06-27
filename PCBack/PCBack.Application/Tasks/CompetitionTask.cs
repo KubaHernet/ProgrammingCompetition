@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace PCBack.Web.Models
+﻿namespace PCBack.Application.Tasks
 {
     public class CompetitionTask
     {

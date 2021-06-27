@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCBack.Web", "PCBack.Web\PCBack.Web.csproj", "{B441CEF2-80D5-474C-956F-710D79B31231}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCBack.Api", "PCBack.Api\PCBack.Api.csproj", "{B441CEF2-80D5-474C-956F-710D79B31231}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCBack.Application", "PCBack.Application\PCBack.Application.csproj", "{A79D27BB-D051-49E5-8A4B-DACBC30A1D73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCBack.Domain", "PCBack.Domain\PCBack.Domain.csproj", "{72677951-F3FC-4A3F-B563-F668BFDDF0C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B441CEF2-80D5-474C-956F-710D79B31231}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B441CEF2-80D5-474C-956F-710D79B31231}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B441CEF2-80D5-474C-956F-710D79B31231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A79D27BB-D051-49E5-8A4B-DACBC30A1D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A79D27BB-D051-49E5-8A4B-DACBC30A1D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A79D27BB-D051-49E5-8A4B-DACBC30A1D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A79D27BB-D051-49E5-8A4B-DACBC30A1D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72677951-F3FC-4A3F-B563-F668BFDDF0C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72677951-F3FC-4A3F-B563-F668BFDDF0C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72677951-F3FC-4A3F-B563-F668BFDDF0C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72677951-F3FC-4A3F-B563-F668BFDDF0C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
