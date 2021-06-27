@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using PCBack.Application;
+using PCBack.Infrastructure;
 
 namespace PCBack.Api
 {
@@ -21,6 +22,7 @@ namespace PCBack.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplication();
+            services.AddInfrastructure(Configuration);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

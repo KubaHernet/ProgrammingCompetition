@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCBack.Api", "PCBack.Api\PC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCBack.Application", "PCBack.Application\PCBack.Application.csproj", "{A79D27BB-D051-49E5-8A4B-DACBC30A1D73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCBack.Domain", "PCBack.Domain\PCBack.Domain.csproj", "{72677951-F3FC-4A3F-B563-F668BFDDF0C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PCBack.Domain", "PCBack.Domain\PCBack.Domain.csproj", "{72677951-F3FC-4A3F-B563-F668BFDDF0C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCBack.Infrastructure", "PCBack.Infrastructure\PCBack.Infrastructure.csproj", "{B86346CB-FFF2-4AEF-9633-A30F108AAB4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{72677951-F3FC-4A3F-B563-F668BFDDF0C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72677951-F3FC-4A3F-B563-F668BFDDF0C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72677951-F3FC-4A3F-B563-F668BFDDF0C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B86346CB-FFF2-4AEF-9633-A30F108AAB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B86346CB-FFF2-4AEF-9633-A30F108AAB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B86346CB-FFF2-4AEF-9633-A30F108AAB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B86346CB-FFF2-4AEF-9633-A30F108AAB4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

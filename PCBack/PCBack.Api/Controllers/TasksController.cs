@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using PCBack.Application.Tasks;
+using PCBack.Application.Features.Tasks;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

@@ -1,4 +1,4 @@
-﻿namespace PCBack.Application.Tasks
+﻿namespace PCBack.Application.Features.Tasks
 {
     public class CompetitionTask
     {
