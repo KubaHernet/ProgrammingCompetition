@@ -12,6 +12,7 @@ namespace PCBack.Api
 {
     public class Startup
     {
+        private const string CorsPolicy = "MyPolicy";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,6 +30,16 @@ namespace PCBack.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PCBack", Version = "v1" });
             });
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: CorsPolicy,
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000","https://localhost:3000")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +55,8 @@ namespace PCBack.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(CorsPolicy);
 
             app.UseAuthorization();
 

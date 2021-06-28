@@ -46,7 +46,7 @@ namespace PCBack.Infrastructure.Services
             public string Output 
             {
                 get => output;
-                set => output = value.TrimEnd('\n');
+                set => output = value?.TrimEnd('\n');
             }
         }
     }
